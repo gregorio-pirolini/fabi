@@ -1,0 +1,193 @@
+
+/* Allgemeines Layout */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #263238;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2457a7;
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #2457a7;
+    font-size: 1.3rem;
+}
+
+/* Eingabebereich */
+
+.eingabe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #00000012;
+}
+
+/* Bruchdarstellung */
+
+.bruch {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    gap: 5px;
+}
+
+.bruch input {
+    width: 75px;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+}
+
+/* Bruchstrich */
+
+.bruch hr {
+    width: 100%;
+    border: none;
+    border-top: 3px solid #263238;
+    margin: 0;
+}
+
+/* Operator */
+
+#operator {
+    font-size: 1.8rem;
+    padding: 8px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    background: white;
+}
+
+/* Berechnen-Button */
+
+#berechnen {
+    padding: 12px 22px;
+    font-size: 1.1rem;
+    background-color: #2457a7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#berechnen:hover {
+    background-color: #173c77;
+}
+
+/* Rechenweg und Ergebnis */
+
+#rechenweg,
+#ergebnis {
+    margin-top: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #00000012;
+}
+
+.rechenschritt {
+    padding: 15px;
+    margin: 12px 0;
+    background: #eef4ff;
+    border-left: 4px solid #2457a7;
+    border-radius: 5px;
+    line-height: 1.7;
+}
+
+/* Ergebnis hervorheben */
+
+#result {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #18794e;
+    text-align: center;
+    padding: 15px;
+}
+
+/*
+ * Später:
+ * .hideMe { display: none; }
+ *
+ * Momentan bleiben alle Schritte sichtbar.
+ */
+
+/* Kleine Bildschirme */
+
+@media (max-width: 500px) {
+    .eingabe {
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .bruch input {
+        width: 60px;
+        font-size: 1.2rem;
+    }
+
+    #berechnen {
+        width: 100%;
+    }
+}
+
+/* Brüche im Rechenweg */
+
+.rechenschritt .bruch,
+#result .bruch {
+    min-width: 30px;
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+
+.rechenschritt .bruch hr,
+#result .bruch hr {
+    border-top: 2px solid currentColor;
+}
+
+/* Brüche im Rechenweg */
+
+.bruch-anzeige {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0 8px;
+    font-size: 1.3rem;
+}
+
+.bruch-anzeige .zaehler {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 2px 8px 5px;
+    border-bottom: 2px solid currentColor;
+}
+
+.bruch-anzeige .nenner {
+    display: block;
+    text-align: center;
+    padding: 5px 8px 2px;
+}

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruchrechner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main>
+        <h1>Bruchrechner</h1>
+
+        <section class="eingabe">
+            <div class="bruch">
+                <input type="number" id="zaehler1" value="1">
+                <hr>
+                <input type="number" id="nenner1" value="2">
+            </div>
+
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">−</option>
+            </select>
+
+            <div class="bruch">
+                <input type="number" id="zaehler2" value="1">
+                <hr>
+                <input type="number" id="nenner2" value="3">
+            </div>
+
+            <button id="berechnen">Berechnen</button>
+        </section>
+
+        <section id="rechenweg">
+            <h2>Rechenweg</h2>
+            <div id="step1" class="rechenschritt hideMe"></div>
+            <div id="step2" class="rechenschritt hideMe"></div>
+            <div id="step3" class="rechenschritt hideMe"></div>
+            <div id="step4" class="rechenschritt hideMe"></div>
+        </section>
+
+        <section id="ergebnis">
+            <h2>Ergebnis</h2>
+            <div id="result"></div>
+        </section>
+    </main>
+
+</body>
+</html>
